@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "JRefresh"
+  s.name         = "JRefresh-Swift5"
   s.version      = "1.5.0"
   s.summary      = "JRefresh is MJRefresh-swift"
 
