@@ -31,10 +31,10 @@ open class JRefreshStateHeader: JRefreshHeader {
     }()
     
     ///所有状态对应的文字
-    lazy var stateTitles: Dictionary = [:]
+    lazy var stateTitles: Dictionary<Int, Any> = Dictionary()
     
     ///key的处理
-    override var lastUpdatedTimeKey: String? {
+    public override var lastUpdatedTimeKey: String? {
         set(newValue) {
             super.lastUpdatedTimeKey = newValue
             // 如果label隐藏了，就不用再处理

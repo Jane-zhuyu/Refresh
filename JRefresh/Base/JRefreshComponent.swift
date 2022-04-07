@@ -24,11 +24,11 @@ public enum JRefreshState: Int {
 }
 
 open class JRefreshComponent: UIView {
-    public typealias Block = (() -> ())?
+    public typealias Block = (() -> ())
    
     //MARK: - 刷新回调
     /// 正在刷新的回调
-    var refreshingBlock: Block
+    var refreshingBlock: Block?
     /// 回调对象
     var refreshingTarget: Any?
     /// 回调方法
@@ -36,9 +36,9 @@ open class JRefreshComponent: UIView {
     
     //MARK: - 刷新状态控制
     ///开始刷新后的回调(进入刷新状态后的回调)
-    var beginRefreshingCompletionBlock: Block
+    var beginRefreshingCompletionBlock: Block?
     ///结束刷新的回调
-    var endRefreshingCompletionBlock: Block
+    var endRefreshingCompletionBlock: Block?
     ///是否正在刷新
     public var refreshing: Bool {
         return self.state == .Refreshing || self.state == .WillRefresh
@@ -158,7 +158,7 @@ extension JRefreshComponent {
             }
         }
     }
-    public func beginRefreshingWithCompletionBlock(_ completionBlock: Block) {
+    public func beginRefreshingWithCompletionBlock(_ completionBlock: @escaping Block) {
         beginRefreshingCompletionBlock = completionBlock
         beginRefreshing()
     }
@@ -167,7 +167,7 @@ extension JRefreshComponent {
             self?.state = .Idle
         }
     }
-    public func endRefreshingWithCompletionBlock(_ completionBlock: Block) {
+    public func endRefreshingWithCompletionBlock(_ completionBlock: @escaping Block) {
         endRefreshingCompletionBlock = completionBlock
         endRefreshing()
     }

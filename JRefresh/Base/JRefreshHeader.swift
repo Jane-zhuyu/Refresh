@@ -11,16 +11,16 @@ import UIKit
 open class JRefreshHeader: JRefreshComponent {
     
     //MARK: - 创建header方法
-    public class func headerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshHeader {
+    public class func headerWithRefreshingBlock(_ refreshingBlock: @escaping Block) -> JRefreshHeader {
         
         let cmp = self.init()
         cmp.refreshingBlock = refreshingBlock
         return cmp
     }
     ///这个key用来存储上一次下拉刷新成功的时间
-    var lastUpdatedTimeKey: String?
+    public var lastUpdatedTimeKey: String?
     ///上一次下拉刷新成功的时间
-    var lastUpdatedTime: Date? {
+    public var lastUpdatedTime: Date? {
         return UserDefaults.standard.object(forKey: lastUpdatedTimeKey ?? "") as? Date
     }
     
