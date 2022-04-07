@@ -90,7 +90,7 @@ open class JRefreshStateHeader: JRefreshHeader {
              // 设置状态文字
             stateLabel.text = stateTitles[newState.hashValue] as? String
             // 重新设置key（重新显示时间）
-            lastUpdatedTimeKey = JRefreshHead.lastUpdateTimeKey
+            lastUpdatedTimeKey = lastUpdatedTimeKey
         }
         get {
             return super.state
