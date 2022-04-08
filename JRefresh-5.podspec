@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "JRefresh-Swift5"
+  s.name         = "JRefresh-5"
   s.version      = "1.5.0"
   s.summary      = "JRefresh is MJRefresh-swift"
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   JRefresh is MJRefresh-swift,hehe~
                    DESC
 
-  s.homepage     = "https://github.com/jiangboLee"
+  s.homepage     = "https://github.com/Jane-zhuyu"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "13.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jiangboLee/Refresh.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Jane-zhuyu/Refresh.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,7 +131,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-
+  s.swift_versions = "5.0"
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
